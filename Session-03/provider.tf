@@ -5,9 +5,17 @@ terraform {
       version = "4.64.0"
     }
   }
+
+  backend "s3" {
+    bucket = "timing-backend-s3"
+    key    = "timing"
+    region = "ap-south-1"
+    dynamodb_table = "timing-lock"
+  }
 }
 
 provider "aws" {
   # Configuration options
   region = "ap-south-2"
+  
 }
