@@ -19,5 +19,4 @@ keeping terraform.tfstate in local is a problem,
 * In case of version control, keeping the terraform state in GitHub also causes problem while infra is creating through CICD. If multiple triggers to the pipeline then duplicate infra would be created.
 * It is best practice to keep the state file in remote locations like S3 for better collaboration between team members.
 
-Now where ever we run terraform apply it connects to S3 and avoid the situations of duplicate infra.
-
+Now where ever we run terraform apply it connects to S3 and avoid the situations of duplicate infra. We need to lock with dynamodb so that multiple persons can't apply at the same time.
