@@ -1,6 +1,6 @@
 variable "cidr" { #declaring name
     type = string #declaring type
-    #default = "10.0.0.0/16" # if you dont this default terraform will ask us at run time.
+    default = "10.0.0.0/16" # if you dont this default terraform will ask us at run time.
 }
 
 variable "public_subnet_cidr" {
