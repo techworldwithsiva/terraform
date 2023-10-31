@@ -9,6 +9,6 @@ terraform {
 
 provider "aws" {
   # Configuration options
-# added a comment for testing
+# added a comment for testing purpose
   region = "ap-south-2"
 }
